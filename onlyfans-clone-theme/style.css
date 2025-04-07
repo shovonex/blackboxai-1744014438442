@@ -1,0 +1,53 @@
+/*
+Theme Name: OnlyFans Clone Theme
+Theme URI: 
+Author: Your Name
+Author URI: 
+Description: Premium adult content platform theme with payment integration
+Version: 1.0
+Text Domain: onlyfans-clone
+*/
+
+/* Tailwind CSS */
+@import url('https://cdn.tailwindcss.com');
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff5e6b, #ff8e53);
+  color: white;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* WP Bakery compatibility */
+.vc_row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+.vc_column_container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Content cards */
+.content-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.content-card:hover {
+  transform: translateY(-5px);
+}
