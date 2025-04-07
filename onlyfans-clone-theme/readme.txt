@@ -1,6 +1,6 @@
 === OnlyFans Clone Theme ===
 
-Contributors: Your Name
+Contributors: Shovon
 Tags: adult content, membership, payment, subscription
 Requires at least: WordPress 5.8
 Tested up to: WordPress 6.2
