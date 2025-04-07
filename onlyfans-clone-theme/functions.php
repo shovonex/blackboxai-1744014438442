@@ -111,5 +111,30 @@ function add_custom_roles() {
         'manage_options' => true,
         'edit_others_posts' => true
     ]);
+
+    // Add admin capabilities
+    $admin = get_role('administrator');
+    $admin->add_cap('manage_models');
+    $admin->add_cap('edit_balances');
+    $admin->add_cap('manage_all_content');
 }
 add_action('init', 'add_custom_roles');
+
+
+// Admin dashboard page
+function add_admin_dashboard() {
+    add_menu_page(
+        'Model Management',
+        'Model Admin',
+        'manage_options',
+        'model-admin',
+        'render_admin_dashboard',
+        'dashicons-admin-users',
+        6
+    );
+}
+add_action('admin_menu', 'add_admin_dashboard');
+
+function render_admin_dashboard() {
+    include get_template_directory() . '/page-templates/admin-dashboard.php';
+}
